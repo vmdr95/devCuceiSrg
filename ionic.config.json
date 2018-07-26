@@ -1,0 +1,7 @@
+{
+  "name": "CUCEI-SRG",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
