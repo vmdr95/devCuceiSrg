@@ -29,18 +29,18 @@ export class LoginPage {
     }).then(res => {
       firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
         .then( user => {
-          console.log(JSON.stringify(user));
-                this.usuarioProv.cargarUsuario(
-                  user.displayName,
-                  user.email,
-                  user.photoURL,
-                  user.uid,
-                  'google'
+          // console.log(JSON.stringify(user));
+          //       this.usuarioProv.cargarUsuario(
+          //         user.displayName,
+          //         user.email,
+          //         user.photoURL,
+          //         user.uid,
+          //         'google'
+          //
+          //       );
+                let correo = user.email;
+                this.valida(correo);
 
-                );
-                // let correo = user.email;
-                // this.valida(correo);
-                this.navCtrl.setRoot(HomePage);
         })
         .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
       }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
