@@ -1,0 +1,36 @@
+page-loginweb {
+  ion-content{
+    // /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1b00cc+0,0e7cd6+50,3096e5+100 */
+    // background: rgb(27,0,204); /* Old browsers */
+    // background: -moz-linear-gradient(45deg,  rgba(27,0,204,1) 0%, rgba(14,124,214,1) 50%, rgba(48,150,229,1) 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(45deg,  rgba(27,0,204,1) 0%,rgba(14,124,214,1) 50%,rgba(48,150,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(45deg,  rgba(27,0,204,1) 0%,rgba(14,124,214,1) 50%,rgba(48,150,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b00cc', endColorstr='#3096e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: linear-gradient(270deg, #2a02ca, #6191e1, #5a65c1);
+ background-size: 600% 600%;
+
+ -webkit-animation: AnimationName 5s ease infinite;
+ -moz-animation: AnimationName 5s ease infinite;
+ animation: AnimationName 5s ease infinite;
+
+ @-webkit-keyframes AnimationName {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
+ @-moz-keyframes AnimationName {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
+ @keyframes AnimationName {
+     0%{background-position:0% 50%}
+     50%{background-position:100% 50%}
+     100%{background-position:0% 50%}
+ }
+  }
+  img{
+    position: relative;
+    left: 32%;
+  }
+}

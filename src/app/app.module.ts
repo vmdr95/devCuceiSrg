@@ -6,8 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import  { LoginPage } from "../pages/login/login";
-
+import { LoginPage } from "../pages/login/login";
+import { LoginwebPage } from "../pages/loginweb/loginweb";
 
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
@@ -26,14 +26,14 @@ export const firebaseConfig = {
   projectId: "cucei-srg",
   storageBucket: "cucei-srg.appspot.com",
   messagingSenderId: "56958534713"
-
 };
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    LoginwebPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +46,8 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    LoginwebPage
   ],
   providers: [
     StatusBar,
