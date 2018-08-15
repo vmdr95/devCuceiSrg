@@ -7,6 +7,28 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import  { LoginPage } from "../pages/login/login";
+
+
+import { UsuarioProvider } from '../providers/usuario/usuario';
+
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+//Plugins
+import { GooglePlus } from '@ionic-native/google-plus';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyA0DEHXIXxm83tCuyo1ywqWYQxDHC-GAzI",
+  authDomain: "cucei-srg.firebaseapp.com",
+  databaseURL: "https://cucei-srg.firebaseio.com",
+  projectId: "cucei-srg",
+  storageBucket: "cucei-srg.appspot.com",
+  messagingSenderId: "56958534713"
+
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -15,7 +37,10 @@ import  { LoginPage } from "../pages/login/login";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,7 +51,9 @@ import  { LoginPage } from "../pages/login/login";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GooglePlus,
+    UsuarioProvider
   ]
 })
 export class AppModule {}
