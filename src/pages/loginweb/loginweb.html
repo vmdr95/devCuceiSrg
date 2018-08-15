@@ -1,6 +1,6 @@
 <ion-content padding>
   <div class="menu" style="width: 50%; position: relative; left: 24%; border: 1px solid blanchedalmond; border-radius: 20px 20px 20px 20px;
-  top: 16%;">
+  top: 10%;">
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -16,8 +16,13 @@
     <ion-row>
       <ion-col>
         <div class="LOGIN-ADM" style="padding-top: 2%;">
-          <h6 style="color: white">Panel para el Administrador del Sistema</h6>
-          <button ion-button color="secondary" block style="border-radius: 7px 7px 7px 7px;">INGRESO ADMIN SRG</button>
+          <h6 style="color: white; text-align: center">Panel para el Administrador del Sistema</h6>
+          <button ion-button color="secondary" (click)="validation()" block style="border-radius: 7px 7px 7px 7px;">INGRESO A BASE DE DATOS DE CUCEI-SRG</button>
+
+          <button ion-button color="primary" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL DASHBOARD MANTENIMIENTO</button>
+
+          <button ion-button color="primary" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL DASHBOARD SEGURIDAD</button>
+
         </div>
       </ion-col>
     </ion-row>

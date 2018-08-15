@@ -25,50 +25,41 @@ export class LoginwebPage {
               private afAuth: AngularFireAuth,) {
   }
 
-  // signInGoogleWeb()
-  // {
-  //  var provider = new firebase.auth.GoogleAuthProvider();
-  //  firebase.auth().signInWithPopup(provider).then(function(result) {
-  //  // This gives you a Google Access Token. You can use it to access the Google API.
-  //  var token = result.credential.accessToken;
-  //  // The signed-in user info.
-  //  var user = result.user;
-  //
-  //        let email = user.email;
-  //        console.log(email);
-  //        if(email.indexOf('@alumnos.udg.mx')!=-1)
-  //        {
-  //          this.navCtrl.push(HomePage);
-  //          // location.href = 'http://127.0.0.1:8000/admin';
-  //        }
-  //          else if(email.indexOf('@academicos.udg.mx')!=-1)
-  //            {
-  //              this.navCtrl.push(HomePage);
-  //            }
-  //              else if(email.indexOf('@cucei.udg.mx')!=-1)
-  //                {
-  //                  this.navCtrl.push(HomePage);
-  //                }
-  //       else
-  //        {
-  //          let email = user.email;
-  //            swal({
-  //                title: "Oops!... Ha Ocurrido un Error.",
-  //                text: "Has introducido un email inválido: "+ email+", el cual no pertenece a un correo Institucional UDG.",
-  //                icon: "error",
-  //            });
-  //       }
-  // }).catch(function(error) {
-  //  // Handle Errors here.
-  //  var errorCode = error.code;
-  //  var errorMessage = error.message;
-  //  // The email of the user's account used.
-  //  var email = error.email;
-  //  // The firebase.auth.AuthCredential type that was used.
-  //  var credential = error.credential;
-  //  // ...
-  // });
-  //
-  // }
+validation(){
+  swal({
+    title:"Escribe la contraseña de Acceso",  
+    content: {
+               element: "input",
+               attributes: {
+                   placeholder: "Type Password Access",
+                   type: "password"
+                    },
+            },
+   className: "pasSwal"
+ }).then((password)=>{
+     let key = "Q3VjZWlTUkcxRGF0YWJhc2VBZG1pbjEwNTg=";
+           //get the password and encode in base64
+           if(btoa(password)==key){
+                swal("¡Acceso Correcto!, Redirigiendo al Administrador...");
+                location.href = 'http://127.0.0.1:8000/admin';
+           }else if(password=="")
+           {
+             swal("No se ingreso ningun dato.");
+           }
+           else{
+             swal("contraseña Incorrecta");
+           }
+
+});
+}
+
+
+  AdPrivacy(){
+    swal({
+    title: "Aviso de Privacidad",
+    text: "En Construcción",
+    icon: "info",
+  });
+  }
 
 }
