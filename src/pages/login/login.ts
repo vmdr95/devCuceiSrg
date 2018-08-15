@@ -3,11 +3,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { AngularFireAuth } from 'angularfire2/auth';
+<<<<<<< HEAD
 // import * as firebase from 'firebase/app';
 import { Platform } from 'ionic-angular';
 import { GooglePlus } from '@ionic-native/google-plus';
 import swal from 'sweetalert';
 import firebase from 'firebase';
+=======
+import * as firebase from 'firebase/app';
+import { Platform } from 'ionic-angular';
+import { GooglePlus } from '@ionic-native/google-plus';
+import swal from 'sweetalert';
+>>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
 
 @IonicPage()
 @Component({
@@ -23,7 +30,22 @@ export class LoginPage {
               private googlePlus: GooglePlus,
               private platform: Platform) {
   }
+  signInGoogle(){
+    this.googlePlus.login({
+      'webClientId': '56958534713-m0bpa8s00ricompodhlg8r420j022ecj.apps.googleusercontent.com',
+      'offline': true
+    }).then(res => {
+      firebase.auth().signInWithCredential(firebase.auth.GoogleAuthProvider.credential(res.idToken))
+        .then( user => {
+          console.log(JSON.stringify(user));
+                this.usuarioProv.cargarUsuario(
+                  user.displayName,
+                  user.email,
+                  user.photoURL,
+                  user.uid,
+                  'google'
 
+<<<<<<< HEAD
   signInGoogle(){
     this.googlePlus.login({
       'webClientId': '56958534713-m0bpa8s00ricompodhlg8r420j022ecj.apps.googleusercontent.com',
@@ -45,25 +67,51 @@ export class LoginPage {
         .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
       }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
 
+=======
+                );
+                // let correo = user.email;
+                // this.valida(correo);
+                this.navCtrl.setRoot(HomePage);
+        })
+        .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
+      }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
+>>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
   }
+  valida(email:string){
+    //Si en el array email contiene el dominio
+    //Dominio alumnos.udg.mx
 
+<<<<<<< HEAD
  valida(email:string){
     //Si en el array email contiene el dominio
     //Dominio alumnos.udg.mx
 
     if(email.indexOf('@alumnos.udg.mx')!=-1)
+=======
+    // if(email.indexOf('@alumnos.udg.mx')!=-1)
+    // {
+    //    this.navCtrl.setRoot(HomePage);
+    // }
+    //
+    if(email == 'miguel.quezada@alumnos.udg.mx')
+>>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
     {
        this.navCtrl.setRoot(HomePage);
     }
     //Dominio academicos.udg.mx
     // else if(email.indexOf('@academicos.udg.mx')!=-1)
     //   {
+<<<<<<< HEAD
     //      this.navCtrl.setRoot(HomePage);
     //   }
     //   else if(email.indexOf('@cucei.udg.mx')!=-1)
     //     {
     //       this.navCtrl.setRoot(HomePage);
     //     }
+=======
+    //     this.navCtrl.setRoot(HomePage);
+    //   }
+>>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
       //si no es ninguno
       else
       {
