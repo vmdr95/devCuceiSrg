@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { AngularFireAuth } from 'angularfire2/auth';
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import * as firebase from 'firebase/app';
 import { Platform } from 'ionic-angular';
 import { GooglePlus } from '@ionic-native/google-plus';
@@ -12,11 +13,19 @@ import firebase from 'firebase';
 =======
 import * as firebase from 'firebase/app';
 import {AuthCredential} from '@firebase/auth-types';
+=======
+// import * as firebase from 'firebase/app';
+>>>>>>> 89e2876cc6a77cb8c5944d3d8a960c8fe0531f76
 import { Platform } from 'ionic-angular';
 import { GooglePlus } from '@ionic-native/google-plus';
-import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import swal from 'sweetalert';
+<<<<<<< HEAD
 >>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
+=======
+import firebase from 'firebase';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import {AuthCredential} from '@firebase/auth-types';
+>>>>>>> 89e2876cc6a77cb8c5944d3d8a960c8fe0531f76
 
 @IonicPage()
 @Component({
@@ -54,6 +63,7 @@ export class LoginPage {
                 let correo = user.email;
                 this.valida(correo);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -93,6 +103,40 @@ export class LoginPage {
     //Si en el array email contiene el dominio
     //Dominio alumnos.udg.mx
 <<<<<<< HEAD
+=======
+
+
+
+ valida(email:string){
+    //Si en el array email contiene el dominio
+    //Dominio alumnos.udg.mx
+
+    if(email.indexOf('@alumnos.udg.mx')!=-1)
+
+    // if(email.indexOf('@alumnos.udg.mx')!=-1)
+    // {
+    //    this.navCtrl.setRoot(HomePage);
+    // }
+    //
+    if(email == 'miguel.quezada@alumnos.udg.mx')
+
+    {
+       this.navCtrl.setRoot(HomePage);
+    }
+    //Dominio academicos.udg.mx
+    // else if(email.indexOf('@academicos.udg.mx')!=-1)
+    //   {
+    //      this.navCtrl.setRoot(HomePage);
+    //   }
+    //   else if(email.indexOf('@cucei.udg.mx')!=-1)
+    //     {
+    //       this.navCtrl.setRoot(HomePage);
+    //     }
+
+    //     this.navCtrl.setRoot(HomePage);
+    //   }
+
+>>>>>>> 89e2876cc6a77cb8c5944d3d8a960c8fe0531f76
     if(email.indexOf('@alumnos.udg.mx')!=-1)
     {
        this.navCtrl.setRoot(HomePage);
