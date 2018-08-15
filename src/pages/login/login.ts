@@ -3,12 +3,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { UsuarioProvider } from '../../providers/usuario/usuario';
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
-import {AuthCredential} from '@firebase/auth-types';
+// import * as firebase from 'firebase/app';
 import { Platform } from 'ionic-angular';
 import { GooglePlus } from '@ionic-native/google-plus';
-import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import swal from 'sweetalert';
+import firebase from 'firebase';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import {AuthCredential} from '@firebase/auth-types';
 
 @IonicPage()
 @Component({
@@ -46,13 +47,38 @@ export class LoginPage {
                 let correo = user.email;
                 this.valida(correo);
 
-        })
-        .catch( error => console.log("Firebase failure: " + JSON.stringify(error)));
-      }).catch(err => console.error("Error: " + JSON.stringify(err))) ;
-  }
-  valida(email:string){
+
+
+
+ valida(email:string){
     //Si en el array email contiene el dominio
     //Dominio alumnos.udg.mx
+
+    if(email.indexOf('@alumnos.udg.mx')!=-1)
+
+    // if(email.indexOf('@alumnos.udg.mx')!=-1)
+    // {
+    //    this.navCtrl.setRoot(HomePage);
+    // }
+    //
+    if(email == 'miguel.quezada@alumnos.udg.mx')
+
+    {
+       this.navCtrl.setRoot(HomePage);
+    }
+    //Dominio academicos.udg.mx
+    // else if(email.indexOf('@academicos.udg.mx')!=-1)
+    //   {
+    //      this.navCtrl.setRoot(HomePage);
+    //   }
+    //   else if(email.indexOf('@cucei.udg.mx')!=-1)
+    //     {
+    //       this.navCtrl.setRoot(HomePage);
+    //     }
+
+    //     this.navCtrl.setRoot(HomePage);
+    //   }
+
     if(email.indexOf('@alumnos.udg.mx')!=-1)
     {
        this.navCtrl.setRoot(HomePage);
