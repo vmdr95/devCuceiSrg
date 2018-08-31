@@ -1,4 +1,15 @@
 <ion-content padding>
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+			<ul class="navbar-nav">
+			<button class="btn btn-primary" data-toggle="collapse" data-target="#tools">Herramientas</button>
+			<div id="tools" class="collapse">
+				<li class="nav-item active">
+				  <a class="nav-link" (click)="validation()">Ingreso BD CUCEI-SRG</a>
+				</li>
+			</div>
+       <ion-icon ios="ios-help-circle" md="md-help-circle" style="position: relative; left: 870%; top: 9%; color: white;">Ayuda</ion-icon>
+			</ul>
+    </nav>
   <div class="menu" style="width: 50%; position: relative; left: 24%; border: 1px solid blanchedalmond; border-radius: 20px 20px 20px 20px;
   top: 10%;">
   <ion-grid>
@@ -9,19 +20,19 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <h2 style="text-align: center; color: white; border-bottom: 3px solid black;">CUCEI-SRG <b style="color: black">WEB</b></h2>
-        <h6 style="text-align: center; color: white;">Sistema de Reportes General.</h6>
+      	<p style="color: black; text-align: center; font-weight: bold; font-size: 15px;">Servicios generales y Mantenimiento.</p>
+        <h2 style="text-align: center; color: white; border-bottom: 3px solid black;"></h2>
+        <h6 style="text-align: center; color: white; font-weight: bold; font-size: 30px; font-style: italic;">Sistema de Reportes General.</h6>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <div class="LOGIN-ADM" style="padding-top: 2%;">
-          <h6 style="color: white; text-align: center">Panel para el Administrador del Sistema</h6>
-          <button ion-button color="secondary" (click)="validation()" block style="border-radius: 7px 7px 7px 7px;">INGRESO A BASE DE DATOS DE CUCEI-SRG</button>
+          <h6 style="color: white; text-align: center">Panel para el Administrador del Sistema.</h6>
 
-          <button ion-button color="primary" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL DASHBOARD MANTENIMIENTO</button>
+          <button ion-button color="primary" (click)="authSys()" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL ADMINISTRADOR AREA MATENIMIENTO</button>
 
-          <button ion-button color="primary" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL DASHBOARD SEGURIDAD</button>
+          <button ion-button color="primary" block style="border-radius: 7px 7px 7px 7px;">INGRESO AL ADMINISTRADOR AREA SEGURIDAD</button>
 
         </div>
       </ion-col>

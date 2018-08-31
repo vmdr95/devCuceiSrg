@@ -9,6 +9,8 @@ import { Platform } from 'ionic-angular';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import swal from 'sweetalert';
+import * as $ from 'jquery';
+import { NgxPopper } from 'angular-popper';
 
 @IonicPage()
 @Component({
@@ -27,7 +29,7 @@ export class LoginwebPage {
 
 validation(){
   swal({
-    title:"Escribe la contraseña de Acceso",  
+    title:"Escribe la contraseña de Acceso",
     content: {
                element: "input",
                attributes: {
@@ -49,10 +51,36 @@ validation(){
            else{
              swal("contraseña Incorrecta");
            }
-
 });
 }
 
+authSys(){
+  swal({
+    title:"Escribe tu clave de Acceso",
+    content: {
+               element: "input",
+               attributes: {
+                   placeholder: "Escribe tu clave",
+                   type: "password"
+                    },
+            },
+   className: "pasSwal"
+ }).then((password)=>{
+     //let key = "Q3VjZWlTUkcxRGF0YWJhc2VBZG1pbjEwNTg=";
+     let clave = password;
+           //get the password and encode in base64
+           if(clave == 'miguel123'){
+                swal("¡Acceso Correcto!, Redirigiendo al Administrador...");
+                // location.href = 'http://127.0.0.1:8000/admin';
+           }else if(password=="" || password == null)
+           {
+             swal("No se ingreso ningun dato.");
+           }
+           else{
+             swal("contraseña Incorrecta");
+           }
+});
+}
 
   AdPrivacy(){
     swal({
