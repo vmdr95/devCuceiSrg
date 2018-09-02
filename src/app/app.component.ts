@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from "../pages/login/login";
 import { HomePage } from '../pages/home/home';
 import { LoginwebPage } from "../pages/loginweb/loginweb";
+import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,7 +23,8 @@ export class MyApp {
         this.rootPage = LoginPage;
       } else {
         // this.rootPage = LoginPage;
-        this.rootPage = LoginwebPage;
+        this.rootPage = MenuprincipalPage;
+        //this.rootPage = LoginwebPage;
       }
     });
   }

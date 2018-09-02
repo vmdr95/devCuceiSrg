@@ -10,7 +10,6 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import swal from 'sweetalert';
 import * as $ from 'jquery';
-import { NgxPopper } from 'angular-popper';
 
 @IonicPage()
 @Component({

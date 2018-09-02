@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { LoginwebPage } from "../pages/loginweb/loginweb";
-
+import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
 //Firebase
@@ -33,7 +33,8 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     LoginPage,
-    LoginwebPage
+    LoginwebPage,
+    MenuprincipalPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +48,8 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     LoginPage,
-    LoginwebPage
+    LoginwebPage,
+    MenuprincipalPage
   ],
   providers: [
     StatusBar,
