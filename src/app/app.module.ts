@@ -3,12 +3,15 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { CallNumber } from '@ionic-native/call-number';
+import { Toast } from '@ionic-native/toast';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
 import { LoginwebPage } from "../pages/loginweb/loginweb";
 import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
+import { FormreportemovilPage } from "../pages/formreportemovil/formreportemovil";
 import { UsuarioProvider } from '../providers/usuario/usuario';
 
 //Firebase
@@ -34,7 +37,8 @@ export const firebaseConfig = {
     HomePage,
     LoginPage,
     LoginwebPage,
-    MenuprincipalPage
+    MenuprincipalPage,
+    FormreportemovilPage
   ],
   imports: [
     BrowserModule,
@@ -49,14 +53,18 @@ export const firebaseConfig = {
     HomePage,
     LoginPage,
     LoginwebPage,
-    MenuprincipalPage
+    MenuprincipalPage,
+    FormreportemovilPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GooglePlus,
-    UsuarioProvider
+    UsuarioProvider,
+    CallNumber,
+    StatusBar,
+    Toast
   ]
 })
 export class AppModule {}
