@@ -6,6 +6,7 @@ import { LoginPage } from "../pages/login/login";
 import { HomePage } from '../pages/home/home';
 import { LoginwebPage } from "../pages/loginweb/loginweb";
 import { MenuprincipalPage } from "../pages/menuprincipal/menuprincipal";
+import { FormreportemovilPage } from "../pages/formreportemovil/formreportemovil";
 @Component({
   templateUrl: 'app.html'
 })
@@ -22,11 +23,11 @@ export class MyApp {
       if (platform.is('cordova')) {
         this.rootPage = LoginPage;
       } else {
-        // this.rootPage = LoginPage;
-        this.rootPage = MenuprincipalPage;
+        //this.rootPage = FormreportemovilPage;
+        this.rootPage = LoginPage;
+        //this.rootPage = MenuprincipalPage;
         //this.rootPage = LoginwebPage;
       }
     });
   }
-
 }

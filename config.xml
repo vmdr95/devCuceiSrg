@@ -83,15 +83,10 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-googleplus" spec="^5.3.0">
-<<<<<<< HEAD
         <variable name="REVERSED_CLIENT_ID" value="56958534713-m173jrtbfjsda0ob8pp0tgpbur81codd.apps.googleusercontent.com" />
-=======
-<<<<<<< HEAD
-        <variable name="REVERSED_CLIENT_ID" value="56958534713-m173jrtbfjsda0ob8pp0tgpbur81codd.apps.googleusercontent.com" />
-=======
-        <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.56958534713-m0bpa8s00ricompodhlg8r420j022ecj" />
->>>>>>> 32d9b737191fb188f5b3fed079d019587fcaf633
->>>>>>> db0afaac361e147687410c01a9076f665db61e7f
     </plugin>
+    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.2" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.7.0" />
     <engine name="android" spec="6.4.0" />
 </widget>
